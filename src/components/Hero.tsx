@@ -1,12 +1,12 @@
+import githubLogo from "../assets/github.png";
+
 export default function Hero() {
   return (
     /* FIXED: Removed overflow-hidden from this section wrapper to let negative positions break out safely */
     <section className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       {/* Decorative Floating Avatars (Left Side Background) */}
-      <div className="absolute left-4 top-20 w-10 h-10 rounded-full bg-purple-100 border border-purple-200 hidden xl:flex items-center justify-center text-xl animate-bounce">
-        👩‍🎤
-      </div>
-      <div className="absolute left-0 bottom-40 w-12 h-12 rounded-full bg-pink-100 border border-pink-200 hidden xl:flex items-center justify-center text-2xl animate-bounce [animation-delay:0.2s]">
+
+      <div className="absolute right-313 bottom-40 w-12 h-12 rounded-full bg-pink-100 border border-pink-200 hidden xl:flex items-center justify-center text-2xl z-20 animate-bounce [animation-delay:0.2s]">
         📚
       </div>
 
@@ -37,21 +37,14 @@ export default function Hero() {
 
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-4 mb-12">
-          <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-2xl font-bold shadow-lg shadow-blue-200 transition-all hover:-translate-y-0.5">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-              />
-            </svg>
-            Download APK
+          <button
+            className="flex items-center gap-2 cursor-pointer bg-black hover:bg-slate-800 text-white px-6 py-3.5 rounded-2xl font-bold shadow-lg shadow-blue-200 transition-all hover:-translate-y-0.5"
+            onClick={() =>
+              window.open("https://github.com/farion1231/cc-switch")
+            }
+          >
+            <img src={githubLogo} alt="Github" className="h-6 w-6" />
+            Github
           </button>
 
           <button className="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/80 px-6 py-3.5 rounded-2xl font-bold shadow-sm transition-all hover:-translate-y-0.5">
